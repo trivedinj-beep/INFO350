@@ -8,6 +8,8 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(cors());
+app.use(express.static(__dirname));
+
 
 app.use((req, res, next) => {
   console.log(`${req.method} ${req.url}`);
