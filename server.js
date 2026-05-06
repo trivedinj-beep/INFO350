@@ -43,6 +43,11 @@ const path = require("path");
 // Serve static files
 app.use(express.static(__dirname));
 
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'project4.html'));
+});
+
+
 // Start server
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
