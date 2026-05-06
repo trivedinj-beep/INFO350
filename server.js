@@ -40,7 +40,7 @@ app.post("/api/items", (req, res) => {
   res.status(201).json(newItem);
 });
 
-const path = require("path");
+
 
 // Serve static files
 app.use(express.static(__dirname));
